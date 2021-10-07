@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.nav-bar{
+  display: flex;
+  padding: 40px 120px;
+}
+
+.nav-logo img{
+  width: 135px;
+}
+
+.nav-links{
+  flex: 1;
+}
+
+.nav-links ul{
+  margin-left: 50px;
+  display: inline;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 20px 25px;
+}
+
+.nav-links ul a{
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after{
+  content: '';
+  width: 0;
+  height: 2px;
+  background:  rgb(240, 127, 35);
+  display: block;
+  margin: auto;
+  transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+  width: 100%
+}
+
+.btn{
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 0;
+  background: rgba(73, 141, 187, 0.938);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: rgb(240, 127, 35);
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links .btn{
+  float: right;
+}
+
+.banner-title{
+  margin: 80px 130px;
+  color: #fff;
+}
+
+.banner-title h1{
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.banner-title h1 span{
+  color: rgba(73, 141, 187, 0.938);
+}
+
+.vertical-bar{
+  height: 100%;
+  background: rgb(0, 0, 0, .2);
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.search-icons{
+  height: 60%;
+  width: 80px;
+}
+
+.search-icons .fa{
+  margin: 25px 23px;
+  display: block;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.search-icons button{
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.social-icons{
+  height: 30%;
+  width: 80px;
+  background: rgba(73, 141, 187, 0.938);
+  text-align: center;
+  padding-top: 27%;
+  bottom: 0;
+  position: absolute;
+}
+
+.social-icons .fa{
+  margin: 15px 23px;
+  display: block;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-icons .fa:hover{
+  background: rgb(240, 127, 35);
+  transition: all 0.3s ease 0s;
+}
+
+body, html{
+  height: 100vh;
+} 
+
+body{
+  margin: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 30% 25% 25% 20%;
+  grid-template-areas: 
+    "header header"
+    "sect1 sect1"
+    "sect2 sect2"
+    "sect3 sect3"
+    "sect4 sect4"
+    "footer footer"
+}
+
+header{
+  grid-area: header;
+}
+
+.sect1{
+  grid-area: sect1;
+  padding-left: 40px;
+}
+
+.sect2{
+  grid-area: sect2;
+  padding-left: 40px;
+}
+
+.sect3{
+  grid-area: sect3;
+  padding-left: 40px;
+}
+
+.sect4{
+  grid-area: sect4;
+  padding-left: 40px;
+}
+
+.footer{
+  grid-area: footer;
+  background: rgba(73, 141, 187, 0.938);
+}

@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+          font-family: sans-serif;
+        }
+    
+        body{
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/window.jpg);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+        .login-page {
+          width: 360px;
+          padding: 8% 0 0;
+          margin: auto;
+        }
+        .form {
+          position: relative;
+          z-index: 1;
+          background:rgb(0,0,0,0.5);
+          max-width: 360px;
+          padding: 45px;
+          text-align: center;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+          margin-top: 100px;
+        }
+        .utu {
+          outline: 0;
+          background: #f2f2f2;
+          width: 100%;
+          border: 0;
+          margin: 0 0 15px;
+          padding: 15px;
+          box-sizing: border-box;
+          font-size: 14px;
+        }
+    
+        .btn {
+          outline: 0;
+          background:rgba(73, 141, 187, 0.938);
+          width: 100%;
+          border: 0;
+          padding: 15px;
+          color: #FFFFFF;
+          font-size: 14px;
+          cursor: pointer;
+        }
+    
+        .btn:hover{
+          background:rgb(240, 127, 35);   
+          transition: all 0.3 ease;                                               
+        }
+    
+        .btn2 {
+          margin-top: 40px;
+       padding: 10px 20px;
+       border: 0;
+       background: rgba(73, 141, 187, 0.938);
+       font-weight: bold;
+       cursor: pointer;
+       margin-left: 1500px;
+        }
+    
+        .btn2:hover{
+          background:rgb(240, 127, 35);   
+          transition: all 0.3 ease;                                               
+        }
+
+
+        .form .message {
+          margin: 15px 0 0;
+          color: #dfdbdb;       
+          font-size: 15px;
+        }
+        .form .message a {
+          color:  rgb(96, 166, 212);
+          text-decoration: none;
+          font-size: 15px;
+        }
+    
+     </style>
+<header>
+  <div class="cart">
+            <button type="button" class="btn2"><a href="home.html" style="text-decoration: none; color: black;">BACK</a></button>
+        </div>
+</header>
+<div class="login-page">
+    <div class="form">
+      <form action="login.php" method="POST" class="login-form">
+        <div class="iyi">
+            <h2 style="color: white;"><strong>Login</strong></h2>
+        <input type="text" id="username" name="username" placeholder="Username" class="utu" required/>
+        <input type="password" id="password" name="password" placeholder="Password" class="utu" required/>       
+    </div>
+        <a href="login.php"><button class="btn">LOG IN</button></a>
+      </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/blueico.ico">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Services</title>
+    </head>
+    <body>
+        <style>
+             *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    
+    header{
+      display: flex;
+      width: 90%;
+      margin: auto;
+      height: 10vh;
+      margin: auto;
+      align-items: center;
+      margin-top: 30px;
+  }
+  body{
+    height: 20vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/cars.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    background-attachment: fixed;
+}
+  .logo-container, .nav-link, .cart{
+      display: flex;
+  }
+  
+  .nav-link{
+      justify-content: space-between;
+      list-style: none;
+      display: inline-block;
+      padding: 20px 25px;
+  }
+  
+  .nav-link{
+    flex: 1;
+  }
+  
+  nav ul{
+    margin-right: 50px;
+    display: inline;
+    
+  }
+  
+  .nav-link a{
+      text-decoration: none;
+      font-size: 13px;
+      color: white;
+  }
+  
+  .nav-link a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:  rgb(240, 127, 35);
+    display: block;
+    margin: auto;
+    transition: .5s;
+  }
+  
+  .nav-link a:hover::after{
+    width: 100%;
+  }
+  
+  .logo-container{
+    width: 135px;
+    
+  }
+  
+  nav{
+      padding-right: 100px;
+  }
+  
+  .btn{
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: 0;
+        background: rgba(73, 141, 187, 0.938);
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 850px;
+        
+    }
+    
+    .btn:hover{
+        background: rgb(240, 127, 35);
+        transition: all 0.3s ease 0s;
+    }
+
+    .single-price{
+        margin: 10px auto;
+        display: inline;
+        width: 100%; 
+        transition: 0.5s;
+    }
+
+    .price-head{
+        margin-top: 40px;
+        background-color:  rgba(73, 141, 187, 0.938);
+        display: inline;
+        float: left;
+        padding: 5px 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .price-head h2{
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+
+    .price-head p{
+        font-size: 15px;
+        color: rgb(233, 230, 230);
+        font-style: italic;
+        line-height: 30px;
+    }
+
+    .price-content{
+        display: inline;
+        float: left;
+        width: 97.5%;
+        padding: 0 15px;
+        background-color: rgb(0,0,0,0.5);
+    }
+
+    .price-content ul li{
+       border-bottom: 1px solid #efefef;
+       padding: 15px 10px;
+       list-style: none; 
+    }
+
+    ul li:last-child{
+        border: none;
+    }
+
+img{
+    width: 300px;
+}
+
+td{
+    padding-left: 120px;
+}
+
+.container{
+    width: 800px;
+    background-color: rgb(0,0,0,0.5);
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    border-radius: 15px 15px 15px 15px;
+}   
+
+.ichi{
+    padding-top: 40px;
+    padding-left: 80px;
+}
+.footer{
+  margin-top: 1390px;
+  background: rgba(73, 141, 187, 0.938);
+}
+
+span{
+    color: rgb(240, 127, 35);
+}
+
+</style>
+
+
+        <header>
+            <div class="logo-container">
+                <img src="images/logo2.png" style="width: 135px;"> 
+            </div>
+            <nav> 
+                <ul>
+                    <li class="nav-link"><a href='home.html'>HOME</a></li>
+                    <li class="nav-link"><a href='about.html'>ABOUT</a></li>
+                    <li class="nav-link"><a href='help.html'>HELP</a></li>
+                </ul>
+            </nav>
+    
+            <div class="cart">
+                <button type="button" class="btn">BOOK NOW</button>
+            </div>
+        </header>
+     
+    <div class="main">
+        <h1 class='ichi' style="color: rgb(240, 127, 35); padding-left: 300px; font-size: 55px;">Our Fleet</h1>
+        <br>
+        <p style="padding-left: 80px; color: white; font-size: 20px; padding-left: 300px;">With a wide range of vehicles - from 4 seaters to 60 seaters, with Velox you can plan the <span>perfect</span> trip at any time, to any where of your <span>desire!</span></p>
+        <section id="price">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="sect1">
+                        <div class="single-price">
+                            <div class="price-head">
+                                <h1>SEDAN</h1>
+                                <p>Great for short distance trips for 1 to 4 passengers.</p>
+                            </div>
+                            <div class="price-content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Adjustable Seats</li>
+                                                <li>Air Conditioning</li>
+                                                <li>Radio, CD player, Aux Jack</li>
+                                            </ul>
+                                        </td>
+                                        <td><img src="images/sedan.jpg"></td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sect2">
+                        <div class="single-price">
+                            <div class="price-head">
+                                <h1>MINI VAN</h1>
+                                <p>Great for long distance trips for up to 18 passengers.<span></span></p>
+                            </div>
+                            <div class="price-content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Reclining Seats</li>
+                                                <li>Air Conditioning</li>
+                                                <li>Radio, CD player, Aux Jack</li>
+                                            </ul>
+                                        </td>
+                                        <td><img src="images/minivan.jpg"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sect3">
+                        <div class="single-price">
+                            <div class="price-head">
+                                <h1>STANDARD BUS</h1>
+                                <p>Great for long distance trips for up to 60 passengers.<span></span></p>
+                            </div>
+                            <div class="price-content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Reclining Seats</li>
+                                                <li>Fan Forced Air Ventilation through a Filter</li>
+                                                <li>Radio, CD player, Aux Jack</li>
+                                            </ul>
+                                        </td>
+                                        <td><img src="images/standbus.jpg"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sect4">
+                        <div class="single-price">
+                            <div class="price-head">
+                                <h1>LUXURY COACH</h1>
+                                <p>Great for long distance trips for up to 52 passengers.<span></span></p>
+                            </div>
+                            <div class="price-content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li>Reclining Seats</li>
+                                                <li>Individual Passenger Controlled Climate / Air Conditioning</li>
+                                                <li>Radio, CD player, Aux Jack</li>
+                                                <li>Onboard Fridge / Bar</li>
+                                                <li>Onboard Restroom</li>
+                                            </ul>
+                                        </td>
+                                        <td><img src="images/luxcoach.jpg"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <div class= "footer">
+        <img class="logo" src="images/logo1.png" style="width:10%; padding-right:300px;">
+        <p style="font-size: 16px; padding-left: 15px; padding-bottom: 3px;"> &copy; Velox 2020. All rights reserved.</p>
+    </div>
+</body>
+</html>

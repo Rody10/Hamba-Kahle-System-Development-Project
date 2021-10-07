@@ -1,0 +1,152 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    
+    .hero{
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/transportation.jpg);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    header{
+      display: flex;
+      width: 90%;
+      margin: auto;
+      height: 10vh;
+      margin-top: 15px;
+      align-items: center;
+      margin-top: 20px;
+  }
+  
+  .logo-container, .nav-link, .cart{
+      display: flex;
+  }
+  
+  .nav-link{
+      justify-content: space-between;
+      list-style: none;
+      display: inline-block;
+      padding: 20px 25px;
+  }
+  
+  .nav-link{
+    flex: 1;
+  }
+  
+  nav ul{
+    margin-right: 50px;
+    display: inline;
+    
+  }
+  
+  .nav-link a{
+      text-decoration: none;
+      font-size: 13px;
+      color: #fff;
+  }
+  
+  .nav-link a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:  rgb(240, 127, 35);
+    display: block;
+    margin: auto;
+    transition: .5s;
+  }
+  
+  .nav-link a:hover::after{
+    width: 100%;
+  }
+  
+  .logo-container{
+    width: 135px;
+  }
+  
+  nav{
+      padding-right: 100px;
+  }
+  
+  .btn{
+        margin-top: 10px;
+        padding: 10px 20px;
+        border: 0;
+        background: rgba(73, 141, 187, 0.938);
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 850px;
+    }
+    
+    .btn:hover{
+        background: rgb(240, 127, 35);
+        transition: all 0.3s ease 0s;
+    }
+  
+
+.main{
+    width: 800px;
+    background-color: rgb(0,0,0,0.5);
+    margin: auto;
+    margin-top: 20px;
+    color: #ffffff;
+    border-radius: 15px 15px 15px 15px; 
+}   
+
+form{
+    padding: 20px;
+}
+
+.uyo{
+    margin-left: 50px;
+}
+.ningi{
+    margin-left: 400px;
+    margin-top: -410px;
+}
+ 
+.btn2{
+    margin-top: 3px;
+    padding: 10px 20px;
+    border: 0;
+    background: rgba(73, 141, 187, 0.938);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 270px;
+}
+
+.btn2:hover{
+    background: rgb(240, 127, 35);
+    transition: all 0.3s ease 0s;
+}
+
+.aka{
+    outline: 0;
+      background: #f2f2f2;
+      width: 60%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+}
+
+.ako{
+    outline: 0;
+      background: #f2f2f2;
+      width: 30%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 14px;
+}
+  .footer{
+    margin-top: 235px;
+    background: rgba(73, 141, 187, 0.938);
+  }

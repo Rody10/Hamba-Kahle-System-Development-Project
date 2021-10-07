@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="booking.css">
+        <link rel="icon" type="image/x-icon" href="images/blueico.ico">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Help</title>
+    </head>
+
+    <style>
+    .hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/happypeeps.png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: absolute;
+    background-attachment: fixed;
+}
+.sect1, .sect2, .sect3, .sect4, .sect5, main{
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+i{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin-left: 200px;
+}
+
+span{
+    color: rgb(240, 127, 35);
+}
+#hands{
+    margin-left: 50px;
+} 
+
+
+.acc-button{
+    display: block;
+    margin-left: -20px;
+    width: 750px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(0,0,0,0.5);
+    text-align: left;
+    transition: background 0.2s;
+    
+}
+
+.acc-button::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+    color: white;
+    margin-top: -20px;
+}
+
+.acc-button--active{background: rgba(0, 0, 0, 0.24)}
+.acc-button--active::after{content: '\25b4'}
+
+.accContent{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 15px;
+}
+    </style>
+    <body>
+        <div class="hero">
+        <header>
+            <div class="logo-container">
+                <img src="images/logo2.png" style="width: 135px;"> 
+            </div>
+            <nav> 
+                <ul>
+                    <li class="nav-link"><a href='home.html'>HOME</a></li>
+                    <li class="nav-link"><a href='about.html'>ABOUT</a></li>
+                    <li class="nav-link"><a href='services.html'>SERVICES</a></li>
+                    
+                </ul>
+            </nav>
+    
+            <div class="cart">
+                <button type="button" class="btn"> <a href="booking.html" style="text-decoration: none; color: black;">BOOK NOW</a></button>
+            </div>
+        </header>
+<br> <br> 
+<h1 class='ichi' style="color: rgb(240, 127, 35); padding-left: 300px; font-size: 55px;">Help</h1>
+
+<div class="main">
+<section class="sect1">
+    <h2 style="color: rgba(73, 141, 187, 0.938); font-size: 25px;">Frequently Asked Questions</h2>
+    <br><br>
+
+    <div class="accordion">
+        <button type="button" class="acc-button"><h4 style="color:  rgba(73, 141, 187, 0.938); font-size: 19px;">What is Velox?</h4></button>
+        <div class="accContent"> 
+            <section class="sect1">    
+            <p style="font-size: 18px; line-height: 33px;">Velox is a company that provides <span>reliable</span> 
+                transport that is intended to get our customers and their loved ones to
+                their <span>desired</span> destinations anywhere in <span>South Africa.</span></p><br>
+            </section>
+        </div>
+
+        <button type="button" class="acc-button"><h4 style="color:  rgba(73, 141, 187, 0.938); font-size: 19px;">How do I Make a Booking?</h4></button>
+        <div class="accContent"> 
+            <section class="sect2">
+                <p style="font-size: 18px; line-height: 33px;">To make a booking, click the <span>"BOOK NOW"</span> button which
+                    is present on the <span>top right</span> corner of the page. You will be presented with a form which will
+                    capture all the necessary details required for us to process your booking. Once we have captured these details, 
+                     an <span>email</span> containing a summary and state of your trip will be sent to you. 
+                </p><br></section>
+        </div>
+    
+        <button type="button" class="acc-button"><h4 style="color:  rgba(73, 141, 187, 0.938); font-size: 19px;">Can My Booking be Unsuccessful?</h4></button>
+        <div class="accContent"> 
+            <section class="sect3">
+                
+                    <p style="font-size: 18px; line-height: 33px;">Unfortunately, however <span>rarely,</span> a booking might be unsuccessful
+                         because of a number of unforeseen reasons, for example, when all of our drivers are employed and no driver
+                    would be available at the time of your desired trip.
+                </p><br>
+                </section>
+        </div>
+
+        <button type="button" class="acc-button"><h4 style="color:  rgba(73, 141, 187, 0.938); font-size: 19px;">What can I do if My Booking is Unsuccessful?</h4></button>
+        <div class="accContent"> 
+            <section class="sect3">
+                <section class="sect5">
+                    
+                        <p style="font-size: 18px; line-height: 33px;">However <span>unlikely,</span> we will advise you on days whereby drivers are not fully employed and kindly 
+                            suggest that you move your booking to one of those days.
+                    </p><br>
+                    </section>
+        </div>
+
+        <button type="button" class="acc-button"><h4 style="color:  rgba(73, 141, 187, 0.938); font-size: 19px;">How do I Cancel a Booking?</h4></button>
+        <div class="accContent"> 
+            <section class="sect4">
+                
+                <p style="font-size: 18px; line-height: 33px;">To cancel a booking, kindly send an <span>email</span> to the administrator containing
+                     the <span>reference number</span> given in the summary email sent to you, and simply expressing your wish
+                    to cancel the booking.
+                </p><br>
+                </section>
+        </div>
+    
+        
+    </div>
+
+<br><br>
+
+</div>
+
+
+<div class="footer">
+    <img class="logo" src="images/logo1.png" style="width:10%">
+    <p style="font-size: 16px; padding-left: 15px; padding-bottom: 3px;"> &copy; Velox 2020. All rights reserved.</p>
+</div>
+<script>
+    document.querySelectorAll('.acc-button').forEach(button =>{
+        button.addEventListener('click', () =>{
+            const accContent = button.nextElementSibling;
+
+            button.classList.toggle('acc-button--active');
+
+            if(button.classList.contains('acc-button--active')){
+                accContent.style.maxHeight = accContent.scrollHeight + 'px'; 
+            } else{
+                accContent.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=y3V7kMrQhGdenQPkbqIa1k9ESwix3dcWrxo8Ob_HQY9QdtXKElJUpEZJ6KIR6WvbiIVSjHXB5VLPnyqTtbCdS9H0dKxuMkDN0x3dlBgfqgx6aTTCqWZjc-zeZnL_7wcBDYMr4RzXeRNERKBpAiY1yWh340juSpfC4pUMyfdiXklKJyPWv2tijC8wiRvtdhDzJRJu2tSSr6csxmw33smR47iQYrRwKqoa0QfGXPHTA79o4hnSZbxEkgz1mC5m9CZiqwXQjWdpM4cQjqK-dBDmZGSV10LX9HWWUrYKHN4mvt_iMRIeE4h9p0Y9J5RsDdf0uGAJSAB2g10ADAYq0WeO6-0RHsyGbUlunGhei9-obP5bsLxVnDxd938q0diVAX-YCT-hzs1wj3tLfywU5lUSjF8zRizGObX87ZiEhKWvktCbiVqmVWiZ2f6Y43sBY7OfhbbRJqmNNo7upaUjwslY_-usuaacOxwntOsM0W6n_DtqeGAx1IPFp_eg9b0JYGvQ1cOK0FKtD4R7pfvYnxgBI6dL60MbDrEk6VHKEFFFXBC5O3YEp8pLfT2wPhpY1a9GU6ZcT2fyZDe5Lmry3kOAehlLQ9dpGN1tLL3sXJMD1T1nkGM_RaafIwFIBDX5b0VSVfmZmubaSqSM0VAcbJ4ee2T_JfnpAfGSq6fetU727zHj--lIAxRcinyHDC10TPyfwwQbD-NRvBX94jRXKRw8iGDkVy8hVNppffTn0H_yRh-FM3J5h6F-FBaGdFUU608BT6sTZ7w0QfSmVxSyl8tt49IabSGPG2gSTF19e8Q17tVFO_ANniW6z8OZo3pPrfcjL3mNmi2nTkgMp5SuOmWafyxJ40HlbRkQY3YBvU2e50PjtlJ_HaNjaKL32G7C2QbkVOIIaqnohPuxvm9FfZgfKgruw8HAVTMz0sSTtRJ0YvA019vVl_30K6Xb2usW9UytMrpdtC4fNA7W6VCE87TrqEk4WqPBQxJ2Kst2Z8mnpopdwpoq1vNV-8KB2wzKq3zo38u_lXZ3HwD7s24mGDk1qCA30ue9P0PvCMhDNP1HYkUhxYvD-QpOQbW3t_HMBjIZK-7dzJWcjk-8cvQXj_EM0jQ6syv_rUPmBCAjD41-lGJMPt3UtH0lfY4zIn__gK61vo9DXKEmR_00qlBI9y1kK4VyS6P1_IFFs1W54Y8N0tmHmY96l17h6dtObNuy8KY5iawfXR4wsazXNGRgVyME5Q" nonce="77a27c973998337e0024be9cbfda574d" charset="UTF-8"></script></head>
+<body>
+  <style>
+    .login-page {
+      width: 360px;
+      padding: 8% 0 0;
+      margin: auto;
+    }
+    .form {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 360px;
+      margin: 0 auto 100px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    .form input {
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .form button {
+      text-transform: uppercase;
+      outline: 0;
+      background: rgba(73, 141, 187, 0.938);
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      -webkit-transition: all 0.3 ease;
+      transition: all 0.3 ease;
+      cursor: pointer;
+    }
+
+    .form button:hover,.form button:active,.form button:focus {
+      background: blue;                                                  
+    }
+
+    .form .message {
+      margin: 15px 0 0;
+      color: #b3b3b3;       
+      font-size: 15px;
+    }
+    .form .message a {
+      color:  rgba(73, 141, 187, 0.938);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .form .register-form {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .container .info {
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .container .info h2 {
+      margin: 0 0 15px;
+      padding: 0;
+      font-size: 36px;
+      font-weight: 300;
+      color: #1a1a1a;
+    }
+
+    .container .info span {
+      color: #4d4d4d;
+      font-size: 12px;
+    }
+
+    .container .info span a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .container .info span .fa {
+      color: #EF3B3A;
+    }
+
+    body {
+      background: #e6ffff;
+      background-image: url("pic3.jpg");
+      background-repeat: no-repeat; 
+      background-size: cover;  
+    }
+
+ </style>
+
+
+<div class="login-page">
+    <div class="form">
+      <form action="regdetails.php" method="POST" class="login-form">
+        <h2><strong>Sign-up</strong></h2>
+        <input type="text" id="firstName" name="firstName" placeholder="first name" required/>
+        <input type="text" id="lastName" name="lastName" placeholder="last name" required/>
+        <input type="text" id="username" name="username" placeholder="Username" required/>
+        <input type="text" id="email" name="email" placeholder="email" required/>      
+        <input type="password" id="password" name="password" placeholder="password" required/>       
+        <a href="regdetails.php"><button>Sign-up</button></a>
+        
+        <p class="message">Already registered? <a href="login.html">login here</a></p>
+      </form>
+    </div>
+</div>
+
+</body>
+</html>

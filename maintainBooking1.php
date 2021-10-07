@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="images/blueico.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bookings</title>
+</head>
+
+<style>
+    *{
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+   }
+   
+   .hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+ }
+   header{
+     display: flex;
+     width: 90%;
+     margin: auto;
+     height: 10vh;
+     margin: auto;
+     align-items: center;
+     margin-top: 20px;
+ }
+ 
+ .logo-container, .nav-link, .cart{
+     display: flex;
+ }
+ 
+ .nav-link{
+     justify-content: space-between;
+     list-style: none;
+     display: inline-block;
+     padding: 20px 25px;
+ }
+ 
+ .nav-link{
+   flex: 1;
+ }
+ 
+ nav ul{
+   margin-right: 50px;
+   display: inline;
+   
+ }
+ 
+ .nav-link a{
+     text-decoration: none;
+     font-size: 13px;
+     color: black;
+ }
+ 
+ .nav-link a::after{
+   content: '';
+   width: 0;
+   height: 2px;
+   background:  rgb(240, 127, 35);
+   display: block;
+   margin: auto;
+   transition: .5s;
+ }
+ 
+ .nav-link a:hover::after{
+   width: 100%;
+ }
+ 
+ .logo-container{
+   width: 135px;
+ }
+ 
+ nav{
+     padding-right: 100px;
+ }
+ 
+ .btn{
+       margin-top: 10px;
+       padding: 10px 20px;
+       border: 0;
+       background: rgba(73, 141, 187, 0.938);
+       font-weight: bold;
+       cursor: pointer;
+       margin-left: 950px;
+       
+   }
+   
+   .btn:hover{
+       background: rgb(240, 127, 35);
+       transition: all 0.3s ease 0s;
+   }
+   
+
+   .btn3{
+       margin-top: 10px;
+       padding: 10px 20px;
+       border: 0;
+       background: rgba(73, 141, 187, 0.938);
+       font-weight: bold;
+       cursor: pointer;
+       margin-left: 5px;
+       
+   }
+   
+   .btn3:hover{
+       background: rgb(240, 127, 35);
+       transition: all 0.3s ease 0s;
+   }
+
+   .content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    min-width: 900px;
+    margin-left: 450px;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   }
+   
+   .content-table thead tr{
+       background-color: rgba(73, 141, 187, 0.938);
+       color: white;
+       text-align: left;
+        font-weight: bold;
+   }
+
+   .content-table th, .content-table td{
+        padding: 12px 15px;
+
+   }
+   .content-table tbody tr{
+       border-bottom: 1px solid #dddddd;
+   }
+
+   .content-table tbody tr:nth-of-type(even){
+       background-color: #f3f3f3;
+   }
+
+   .content-table tbody tr a{
+       text-decoration: none;
+       color: black;
+   }
+
+   .content-table tbody tr a:hover{
+       color: rgb(240, 127, 35);
+       transition: all 0.3s ease 0s;
+   }
+
+   .content-table tbody tr{
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+   }
+
+</style>
+
+
+<div class="hero"> 
+<header>
+        <div class="logo-container">
+            <img src="images/logo2.png" style="width: 135px;"> 
+        </div>
+        <nav> 
+            <ul>
+                <li class="nav-link"><a href='home1.html'></a></li>
+                <li class="nav-link"><a href='newabout.html'></a></li>
+                <li class="nav-link"><a href='help.html'></a></li>
+            </ul>
+        </nav>
+
+        <div class="cart">
+            <button type="button" class="btn"><a href="admin.php" style="text-decoration: none; color: black;">BACK</a></button>
+        </div>
+    </header>
+
+<body>
+
+<h1 style="color: rgb(240, 127, 35); padding-left: 200px; padding-top: 50px; font-size: 45px;">Bookings</h1>
+    <br>
+
+   <form action="maintainBooking1.php" method="POST">
+       <label>Bookings Scheduled For:</label><br>
+       <input type="date" name="date" id="date" required>&nbsp;&nbsp;
+       <input type="submit" name="submit" value="Go">
+    </form>
+
+    <?php
+    if(isset($_REQUEST['submit'])){
+
+        $date = $_REQUEST['date'];
+    
+        require_once("config.php");
+
+    $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or 
+        die("<p style=\" color: red;\">Couldn't connect to the database, check your credentials!</p>");
+
+        $query = "SELECT teamvelox.booking.bookingNumber, teamvelox.booking.departure, teamvelox.booking.destination, teamvelox.booking.startDate, teamvelox.booking.endDate, teamvelox.booking.numberOfPassengers, teamvelox.booking.vehicleType,
+        teamvelox.client.firstName, teamvelox.client.lastName, teamvelox.client.contactNumber, teamvelox.client.emailAddress
+        FROM teamvelox.booking
+        INNER JOIN teamvelox.client ON teamvelox.client.clientId = teamvelox.booking.clientId
+        WHERE teamvelox.booking.startDate = '$date'"; 
+
+    $queryDriver = "SELECT * FROM teamvelox.driver";          //
+    $resultDriver = mysqli_query($conn,$queryDriver);  //
+
+
+    $result = mysqli_query($conn, $query) or 
+        die("<p style=\" color: red;\> ERROR: Couldn't execute query!</p>");
+
+    echo "<table class=\"content-table\">
+    <thead>
+     <tr>
+            <td>Bookings</td>
+            <td>Details</td>
+            <td>Delete</td>
+            <td>Assign Driver</td>
+            </tr></thead>";
+    
+    while($row = mysqli_fetch_array($result))
+    {
+        echo "<tbody><tr>";
+        echo "<td>" . $row['firstName'] . " " . $row['lastName'] . "</td>";
+        echo "<td>" . "<a href =\"bookingDetails.php?id=" . $row['bookingNumber'] . "\"><i class=\"fa fa-file-text-o\" style=\"color: rgba(40, 189, 73, 0.938);\"></i></a>" . "</td>";
+        echo "<td>" . "<a href =\"bookingDelete.php?id=" . $row['bookingNumber'] . 
+        "\" onClick=\"return confirm('Are you sure you want to remove the " . strtoupper($row['firstName']) . " " .
+         strtoupper($row['lastName']) . " booking?');\"><i class=\"fa fa-times-circle-o\" style=\"color: red;\"></i></a>" . "</td>";
+         
+        }
+
+        echo "</table>";
+    }
+        ////
+        echo "<td>" . 
+
+         "<form action = successAssignDriver.html>"
+        
+           . "<select form="."assignForm". "id = driverName"."name = driverName".">"; 
+        echo    "<option hidden disabled selected value> Select Driver </option>";
+                while($row1 = mysqli_fetch_array($resultDriver)):;
+        echo        "<option>" . $row1[1] . "</option>";
+                endwhile;
+        echo     "</select>" .
+                //add form
+
+                "<input type="."submit"." value="."Confirm Assignment class='btn3'>"
+
+
+        ."</form>" 
+                
+                // "<button class="."button button1".">Confirm</button>".             
+                
+         .       "</td>"
+                
+         . "</tr></tbody>";    
+     
+
+        // $queryDriver = "SELECT * FROM teamvelox.driver";          //
+        // $resultDriver = mysqli_query($conn, $queryDriver);  //
+        
+        // mysqli_close($conn);
+    
+    ?>                  
+    
+   
+</body>
+</html>
