@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url(images/office.png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nav-bar{
+    display: flex;
+    padding: 40px 120px;
+}
+
+.nav-logo img{
+    width: 135px;
+}
+.nav-links{
+    flex: 1;
+}
+
+.nav-links ul{
+    margin-left: 50px;
+    display: inline;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 25px 25px;
+}
+
+.nav-links ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:  rgb(240, 127, 35);
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%
+}
+
+table{
+    display: inline-table;
+    padding-top: 40px;
+    margin-left: 500px;
+}
+
+td{
+    padding: 100px;
+    
+}
+
+h1{
+    font-size: 35px;
+    color: rgba(73, 141, 187, 0.938);
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 250px;
+    margin-bottom: 0;
+    position: absolute;
+}
+
+td a{
+    text-decoration: none;
+    color: white;
+}
+
+td a:hover{
+    color: rgb(240, 127, 35);
+    transition: 0,5s;  
+}
+
+.fa{
+    font-size: 100px;
+}
+
+i{
+    margin: 10px 30px;
+    display: inline-block;
+    padding: 20px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+i:hover{
+    color: rgb(240, 127, 35);
+    border: 1px solid rgb(240, 127, 35);
+    transition: 0,5s;
+}
+
+td a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background:  rgb(240, 127, 35);
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+td a:hover::after{
+    width: 100%
+}
